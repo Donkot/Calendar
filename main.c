@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 int main()
 {
     char a[42];
-    int data,q,w,e,r,y,d,m,dayname;
+    int q,w,e,y,d,m,dayname;
     int i = -1;
     int error=0;
     w=1;
@@ -59,7 +61,7 @@ int main()
             }
     }
      if (m==2 && d>29 && d<1){
-         if (y%4==0 && y%100!=0 || y%400==0){
+         if ((y%4==0 && y%100!=0) || y%400==0){
             printf("This month a total of 29 days");
             error=1;
          }
@@ -86,3 +88,4 @@ int main()
 }
      }
 }
+
